@@ -73,7 +73,7 @@
                     Mail:</p>
             </td>
             <td>
-                <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="250px" EnableTheming="False">mail</asp:TextBox>
             </td>
         </tr>
         <tr>
