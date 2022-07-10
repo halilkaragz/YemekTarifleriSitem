@@ -28,7 +28,7 @@
                     Tarih Ad:</p>
             </td>
             <td>
-                <asp:TextBox ID="txtTarifAd" runat="server" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="txtTarifAd" runat="server" Width="250px" CssClass="tb5"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@
                     Malzemeler:</p>
             </td>
             <td>
-                <asp:TextBox ID="txtMalzemeler" runat="server" Height="80px" TextMode="MultiLine" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="txtMalzemeler" runat="server" Height="80px" TextMode="MultiLine" Width="250px" CssClass="tb5"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -46,7 +46,7 @@
                     Yapılışı:</p>
             </td>
             <td>
-                <asp:TextBox ID="txtYapilis" runat="server" Height="150px" TextMode="MultiLine" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="txtYapilis" runat="server" Height="150px" TextMode="MultiLine" Width="250px" CssClass="tb5"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -55,7 +55,7 @@
                     Resim:</p>
             </td>
             <td>
-                <asp:FileUpload ID="fuResim" runat="server" Width="250px" />
+                <asp:FileUpload ID="fuResim" runat="server" Width="250px" CssClass="tb5" />
             </td>
         </tr>
         <tr>
@@ -64,7 +64,7 @@
                     Öneren:</p>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtOneren" runat="server" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="txtOneren" runat="server" Width="250px" CssClass="tb5"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -73,7 +73,7 @@
                     Mail:</p>
             </td>
             <td>
-                <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="250px" EnableTheming="False">mail</asp:TextBox>
+                <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="250px" EnableTheming="False" CssClass="tb5">mail</asp:TextBox>
             </td>
         </tr>
         <tr>
