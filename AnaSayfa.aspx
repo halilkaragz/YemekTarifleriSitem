@@ -15,10 +15,8 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-        &nbsp;&nbsp;&nbsp;
-        <asp:DataList ID="DataList2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">         
+        <asp:DataList ID="DataList2" runat="server" Width="443px">
             <ItemTemplate>
                 <table class="auto-style4">
                     <tr>
@@ -51,6 +49,5 @@
                     </tr>
                 </table>
             </ItemTemplate>
-        </asp:DataList>
-    </p>
+        </asp:DataList>  
 </asp:Content>

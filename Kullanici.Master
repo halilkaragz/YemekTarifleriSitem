@@ -31,6 +31,7 @@
         <div>
 
             <div style="height: 150px; width: 700px; margin-left: 300px; background-color: #ce7171;">
+                <asp:Image ID="Image1" runat="server" Height="148px" Width="698px" />
             </div>
             <div style="margin-left: 300px; width: 700px; height: 20px;">&nbsp;</div>
             <div style="margin-left: 300px; width: 700px; height: 40px; background-color: #fff;">
@@ -52,7 +53,9 @@
                             <ItemTemplate>
                                 <div style="border: thin solid #CCCCCC;">
                                     <strong>
+                                         <a href="KategoriDetay.aspx?Id=<%# Eval("Id") %>">
                                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Ad") %>'></asp:Label>
+                                        </a>
                                     &nbsp; (
                                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("Adet") %>'></asp:Label>
                                     &nbsp;)</strong></div>
