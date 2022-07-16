@@ -56,7 +56,9 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Ad") %>'></asp:Label>
                         </td>
                         <td class="auto-style7">
-                            <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/ikonlar/236-2362491_delete-icon-png.png" Width="30px" />
+                            <a href="Kategoriler.aspx?Id=<%#Eval("Id") %>&islem=sil">
+                                <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/ikonlar/236-2362491_delete-icon-png.png" Width="30px" />
+                            </a>
                         </td>
                         <td class="auto-style8">
                             <a href="KategoriDuzenle.aspx?Id=<%#Eval("Id") %>">
