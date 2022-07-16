@@ -21,6 +21,14 @@ namespace YemekTarifleriSitem
 
             Panel2.Visible = false;
             Panel4.Visible = false;
+
+            //kategoriler dropdownlist için kodlar
+            SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
+            SqlDataReader drDw = dropDwcommand.ExecuteReader();
+            DropDownList1.DataTextField = "Ad";
+            DropDownList1.DataValueField = "Id";
+            DropDownList1.DataSource = drDw;
+            DropDownList1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

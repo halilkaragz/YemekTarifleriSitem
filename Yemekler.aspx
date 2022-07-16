@@ -31,6 +31,9 @@
             font-weight: bold;
             font-size: small;
         }
+        .auto-style13 {
+            height: 26px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -90,22 +93,43 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>YEMEK ADI :</td>
-                <td>
-                    <asp:TextBox ID="txbKategoriAdi" runat="server"></asp:TextBox>
+                <td class="auto-style13"><strong>YEMEK ADI :</strong></td>
+                <td class="auto-style13">
+                    <asp:TextBox ID="txbKategoriAdi" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td>YEMEK RESMİ :</td>
+                <td><strong>MALZEMELER :</strong></td>
                 <td>
-                    <asp:FileUpload ID="fuIcon" runat="server" />
+                    <asp:TextBox ID="txbKategoriAdi0" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>YEMEK TARİFİ :</strong></td>
+                <td>
+                    <asp:TextBox ID="txbKategoriAdi1" runat="server" Height="200px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>KATEGORİ :</strong></td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="300px">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td><strong>
-                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style12" Height="30px" Text="Ekle" Width="125px"/>
-                </strong></td>
+                <td class="auto-style7"><strong>
+                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style12" Height="30px" Text="Ekle" Width="125px" />
+                    </strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
             </tr>
         </table>
     </asp:Panel>
