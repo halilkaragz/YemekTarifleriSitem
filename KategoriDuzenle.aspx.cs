@@ -18,21 +18,21 @@ namespace YemekTarifleriSitem
 
             if (Page.IsPostBack == false)
             {
-                SqlCommand komut = new SqlCommand("Select * From Kategoriler Where Id = @p1", bgl.baglanti());
-                if (String.IsNullOrEmpty(kategoriId))
-                {
-                    kategoriId = "";
-                }
-                komut.Parameters.AddWithValue("@p1", kategoriId);
-                SqlDataReader dr = komut.ExecuteReader();
-                while (dr.Read())
-                {
-                    TextBox1.Text = dr[1].ToString();
-                    TextBox2.Text = dr[2].ToString();
-                }
-                bgl.baglanti().Close();
+            SqlCommand komut = new SqlCommand("Select * From Kategoriler Where Id = @p1", bgl.baglanti());
+            if (String.IsNullOrEmpty(kategoriId))
+            {
+                kategoriId = "";
             }
+            komut.Parameters.AddWithValue("@p1", kategoriId);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                TextBox1.Text = dr[1].ToString();
+                TextBox2.Text = dr[2].ToString();
+            }
+            bgl.baglanti().Close();
         }
+    }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
