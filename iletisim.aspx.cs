@@ -22,6 +22,6 @@ namespace YemekTarifleriSitem
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
 
-        }
+        }       
     }
 }
