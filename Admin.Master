@@ -9,15 +9,16 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        
         .auto-style3 {
             float: left;
             width: 200px;
             height: auto;
         }
+
         .auto-style4 {
             width: 100%;
         }
+
         .auto-style5 {
             height: 150px;
             width: 700px;
@@ -41,11 +42,11 @@
                         <tr>
                             <td>&nbsp;</td>
                         </tr>
-                        <tr>                            
-                            <td style="border: thin solid #FFFFFF"> <a href="Kategoriler.aspx">KATEGORİLER</a></td>                            
+                        <tr>
+                            <td style="border: thin solid #FFFFFF"><a href="Kategoriler.aspx">KATEGORİLER</a></td>
                         </tr>
                         <tr>
-                            <td style="border: thin solid #FFFFFF">YEMEKLER</td>
+                            <td style="border: thin solid #FFFFFF"><a href="Yemekler.aspx">YEMEKLER</a></td>
                         </tr>
                         <tr>
                             <td style="border: thin solid #FFFFFF">YORUMLAR</td>
