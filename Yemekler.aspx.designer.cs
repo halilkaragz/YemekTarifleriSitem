@@ -96,40 +96,40 @@ namespace YemekTarifleriSitem
         protected global::System.Web.UI.WebControls.Panel Panel4;
 
         /// <summary>
-        /// txbKategoriAdi control.
+        /// txbYemekAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbKategoriAdi;
+        protected global::System.Web.UI.WebControls.TextBox txbYemekAdi;
 
         /// <summary>
-        /// txbKategoriAdi0 control.
+        /// txbMalzemeler control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbKategoriAdi0;
+        protected global::System.Web.UI.WebControls.TextBox txbMalzemeler;
 
         /// <summary>
-        /// txbKategoriAdi1 control.
+        /// txbYemekTarifi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbKategoriAdi1;
+        protected global::System.Web.UI.WebControls.TextBox txbYemekTarifi;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// ddlKategori control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlKategori;
 
         /// <summary>
         /// btnEkle control.

@@ -95,32 +95,32 @@
             <tr>
                 <td class="auto-style13"><strong>YEMEK ADI :</strong></td>
                 <td class="auto-style13">
-                    <asp:TextBox ID="txbKategoriAdi" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txbYemekAdi" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td><strong>MALZEMELER :</strong></td>
                 <td>
-                    <asp:TextBox ID="txbKategoriAdi0" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txbMalzemeler" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td><strong>YEMEK TARİFİ :</strong></td>
                 <td>
-                    <asp:TextBox ID="txbKategoriAdi1" runat="server" Height="200px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txbYemekTarifi" runat="server" Height="200px" TextMode="MultiLine" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td><strong>KATEGORİ :</strong></td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="300px">
+                    <asp:DropDownList ID="ddlKategori" runat="server" Width="300px">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td class="auto-style7"><strong>
-                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style12" Height="30px" Text="Ekle" Width="125px" />
+                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style12" Height="30px" OnClick="btnEkle_Click" Text="Ekle" Width="125px" />
                     </strong></td>
             </tr>
             <tr>

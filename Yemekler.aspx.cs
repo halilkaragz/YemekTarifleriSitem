@@ -13,6 +13,16 @@ namespace YemekTarifleriSitem
         SqlSinifi bgl = new SqlSinifi();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Page.IsPostBack==false)
+            {
+                //kategoriler dropdownlist için kodlar
+                SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
+                SqlDataReader drDw = dropDwcommand.ExecuteReader();
+                ddlKategori.DataTextField = "Ad";
+                ddlKategori.DataValueField = "Id";
+                ddlKategori.DataSource = drDw;
+                ddlKategori.DataBind();
+            }
             //yemek listesi
             SqlCommand komut = new SqlCommand("Select * From Yemekler", bgl.baglanti());
             SqlDataReader dr = komut.ExecuteReader();
@@ -20,15 +30,7 @@ namespace YemekTarifleriSitem
             DataList1.DataBind();
 
             Panel2.Visible = false;
-            Panel4.Visible = false;
-
-            //kategoriler dropdownlist için kodlar
-            SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
-            SqlDataReader drDw = dropDwcommand.ExecuteReader();
-            DropDownList1.DataTextField = "Ad";
-            DropDownList1.DataValueField = "Id";
-            DropDownList1.DataSource = drDw;
-            DropDownList1.DataBind();
+            Panel4.Visible = false;            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -49,6 +51,18 @@ namespace YemekTarifleriSitem
         protected void Button4_Click(object sender, EventArgs e)
         {
             Panel4.Visible = false;
+        }
+
+        protected void btnEkle_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("insert into yemekler " +
+                " (ad, malzeme, tarif, kategoriId) values (@p1, @p2, @p3, @p4) ", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", txbYemekAdi.Text);
+            komut.Parameters.AddWithValue("@p2", txbMalzemeler.Text);
+            komut.Parameters.AddWithValue("@p3", txbYemekTarifi.Text);
+            komut.Parameters.AddWithValue("@p4", ddlKategori.SelectedValue);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
         }
     }
 }
