@@ -64,7 +64,7 @@
                             </a>
                         </td>
                         <td class="auto-style8">
-                            <a href="KategoriDuzenle.aspx?Id=<%#Eval("Id") %>">
+                            <a href="YemekDuzenle.aspx?Id=<%#Eval("Id") %>">
                                 <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/png-transparent-computer-icons-icon-design-database-icon-text-trademark-logo.png" Width="30px" />
                             </a>
                         </td>
