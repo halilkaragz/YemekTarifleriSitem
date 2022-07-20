@@ -19,11 +19,11 @@ namespace YemekTarifleriSitem
             if (Page.IsPostBack == false)
             {
                 SqlCommand komut = new SqlCommand("Select * From Yemekler Where Id = @p1", bgl.baglanti());
-                if (String.IsNullOrEmpty(kategoriId))
+                if (String.IsNullOrEmpty(yemekId))
                 {
                     yemekId = "";
                 }
-                komut.Parameters.AddWithValue("@p1", kategoriId);
+                komut.Parameters.AddWithValue("@p1", yemekId);
                 SqlDataReader dr = komut.ExecuteReader();
                 while (dr.Read())
                 {
@@ -32,7 +32,30 @@ namespace YemekTarifleriSitem
                     TextBox3.Text = dr[3].ToString();
                 }
                 bgl.baglanti().Close();
+
+                //kategoriler dropdownlist için kodlar
+                SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
+                SqlDataReader sqlDataReader = dropDwcommand.ExecuteReader();
+                DropDownList1.DataTextField = "Ad";
+                DropDownList1.DataValueField = "Id";
+                DropDownList1.DataSource = sqlDataReader;
+                DropDownList1.DataBind();
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand sqlCommand =  new SqlCommand("Update Yemekler Set " +
+                "Ad=@p1, Malzeme=@p2, Tarif=@p3, KategoriId = @p4" +
+                " Where Id=@p5", bgl.baglanti());
+
+            sqlCommand.Parameters.AddWithValue("@p1", TextBox1.Text);
+            sqlCommand.Parameters.AddWithValue("@p2", TextBox2.Text);
+            sqlCommand.Parameters.AddWithValue("@p3", TextBox3.Text);
+            sqlCommand.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+            sqlCommand.Parameters.AddWithValue("@p5", yemekId);
+            sqlCommand.ExecuteNonQuery();
+            bgl.baglanti().Close();
         }
     }
 }
