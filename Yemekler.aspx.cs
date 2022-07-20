@@ -11,10 +11,21 @@ namespace YemekTarifleriSitem
     public partial class Yemekler : System.Web.UI.Page
     {
         SqlSinifi bgl = new SqlSinifi();
-        protected void Page_Load(object sender, EventArgs e)
+        string islem = "";
+        string id = "";
+        protected object Page_Load(object sender, EventArgs e)
         {
             if (Page.IsPostBack==false)
             {
+                //silme
+                id = Request.QueryString["Id"];
+                if (string.IsNullOrEmpty(id))
+                {
+                    id = "";
+                }
+                islem = Request.QueryString["islem"]; ;
+
+
                 //kategoriler dropdownlist için kodlar
                 SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
                 SqlDataReader drDw = dropDwcommand.ExecuteReader();
@@ -30,7 +41,15 @@ namespace YemekTarifleriSitem
             DataList1.DataBind();
 
             Panel2.Visible = false;
-            Panel4.Visible = false;            
+            Panel4.Visible = false;
+
+            if (islem=="sil")
+            {
+                SqlCommand sqlCommand = new SqlCommand("Delete From Yemeler Where Id=@p1", bgl.baglanti());
+                sqlCommand.Parameters.AddWithValue("@p1", id);
+                sqlCommand.ExecuteNonQuery();
+                bgl.baglanti().Close();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
