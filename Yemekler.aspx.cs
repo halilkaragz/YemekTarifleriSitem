@@ -13,44 +13,7 @@ namespace YemekTarifleriSitem
         SqlSinifi bgl = new SqlSinifi();
         string islem = "";
         string id = "";
-        protected object Page_Load(object sender, EventArgs e)
-        {
-            if (Page.IsPostBack==false)
-            {
-                //silme
-                id = Request.QueryString["Id"];
-                if (string.IsNullOrEmpty(id))
-                {
-                    id = "";
-                }
-                islem = Request.QueryString["islem"]; ;
-
-
-                //kategoriler dropdownlist için kodlar
-                SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
-                SqlDataReader drDw = dropDwcommand.ExecuteReader();
-                ddlKategori.DataTextField = "Ad";
-                ddlKategori.DataValueField = "Id";
-                ddlKategori.DataSource = drDw;
-                ddlKategori.DataBind();
-            }
-            //yemek listesi
-            SqlCommand komut = new SqlCommand("Select * From Yemekler", bgl.baglanti());
-            SqlDataReader dr = komut.ExecuteReader();
-            DataList1.DataSource = dr;
-            DataList1.DataBind();
-
-            Panel2.Visible = false;
-            Panel4.Visible = false;
-
-            if (islem=="sil")
-            {
-                SqlCommand sqlCommand = new SqlCommand("Delete From Yemeler Where Id=@p1", bgl.baglanti());
-                sqlCommand.Parameters.AddWithValue("@p1", id);
-                sqlCommand.ExecuteNonQuery();
-                bgl.baglanti().Close();
-            }
-        }
+       
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -82,6 +45,45 @@ namespace YemekTarifleriSitem
             komut.Parameters.AddWithValue("@p4", ddlKategori.SelectedValue);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Page.IsPostBack == false)
+            {
+                //silme
+                id = Request.QueryString["Id"];
+                if (string.IsNullOrEmpty(id))
+                {
+                    id = "";
+                }
+                islem = Request.QueryString["islem"]; ;
+
+
+                //kategoriler dropdownlist için kodlar
+                SqlCommand dropDwcommand = new SqlCommand("Select * from Kategoriler", bgl.baglanti());
+                SqlDataReader drDw = dropDwcommand.ExecuteReader();
+                ddlKategori.DataTextField = "Ad";
+                ddlKategori.DataValueField = "Id";
+                ddlKategori.DataSource = drDw;
+                ddlKategori.DataBind();
+            }
+            //yemek listesi
+            SqlCommand komut = new SqlCommand("Select * From Yemekler", bgl.baglanti());
+            SqlDataReader dr = komut.ExecuteReader();
+            DataList1.DataSource = dr;
+            DataList1.DataBind();
+
+            Panel2.Visible = false;
+            Panel4.Visible = false;
+
+            if (islem == "sil")
+            {
+                SqlCommand sqlCommand = new SqlCommand("Delete From Yemeler Where Id=@p1", bgl.baglanti());
+                sqlCommand.Parameters.AddWithValue("@p1", id);
+                sqlCommand.ExecuteNonQuery();
+                bgl.baglanti().Close();
+            }
         }
     }
 }
