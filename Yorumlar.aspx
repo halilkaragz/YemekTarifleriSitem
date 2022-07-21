@@ -29,7 +29,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Panel ID="Panel1" runat="server" CssClass="auto-style6">
+    <asp:Panel ID="Panel1" runat="server" Style="background-color: #CCCCCC">
         <table class="auto-style4">
             <tr>
                 <td class="auto-style10">

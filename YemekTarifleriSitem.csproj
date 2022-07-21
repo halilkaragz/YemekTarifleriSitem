@@ -73,6 +73,7 @@
     <Content Include="GununYemegi.aspx" />
     <Content Include="Hakkimizda.aspx" />
     <Content Include="ikonlar\236-2362491_delete-icon-png.png" />
+    <Content Include="ikonlar\people-reading-news-newspaper-morning-512_93157.png" />
     <Content Include="ikonlar\png-clipart-computer-software-computer-icons-web-browser-computing-data-restart-miscellaneous-trademark.png" />
     <Content Include="ikonlar\png-transparent-computer-icons-icon-design-database-icon-text-trademark-logo.png" />
     <Content Include="iletisim.aspx" />
@@ -80,6 +81,7 @@
     <Content Include="KategoriDetay.aspx" />
     <Content Include="Kategoriler.aspx" />
     <Content Include="Kullanici.css" />
+    <Content Include="Mesajlar.aspx" />
     <Content Include="Resimler\Kabak Mücver.jpeg" />
     <Content Include="Resimler\Hakkimizda.png" />
     <Content Include="TarifOner.aspx" />
@@ -160,6 +162,13 @@
     </Compile>
     <Compile Include="Kullanici.Master.designer.cs">
       <DependentUpon>Kullanici.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mesajlar.aspx.cs">
+      <DependentUpon>Mesajlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mesajlar.aspx.designer.cs">
+      <DependentUpon>Mesajlar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlSinifi.cs" />
