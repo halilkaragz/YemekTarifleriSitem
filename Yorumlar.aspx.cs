@@ -26,10 +26,7 @@ namespace YemekTarifleriSitem
             SqlCommand command = new SqlCommand("Select * From Yorumlar where Onay<>1", bgl.baglanti());
             SqlDataReader sqlDataReader = command.ExecuteReader();
             DataList2.DataSource = sqlDataReader;
-            DataList2.DataBind();
-           
-            
-
+            DataList2.DataBind();  
         }
 
         protected void Button1_Click(object sender, EventArgs e)
