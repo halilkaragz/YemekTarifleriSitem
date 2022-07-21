@@ -15,13 +15,21 @@ namespace YemekTarifleriSitem
         protected void Page_Load(object sender, EventArgs e)
         {
             Panel2.Visible = false;
-
-            SqlCommand sqlCommand = new SqlCommand("Select * From Yorumlar", bgl.baglanti());
+            Panel4.Visible = false;
+            //onaylı Yorumlar  listesi
+            SqlCommand sqlCommand = new SqlCommand("Select * From Yorumlar where Onay=1", bgl.baglanti());
             SqlDataReader dr = sqlCommand.ExecuteReader();
             DataList1.DataSource = dr;
             DataList1.DataBind();
+
+            //Onaysız yorumlar listesi
+            SqlCommand command = new SqlCommand("Select * From Yorumlar where Onay<>1", bgl.baglanti());
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            DataList2.DataSource = sqlDataReader;
+            DataList2.DataBind();
            
-            bgl.baglanti().Close();
+            
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -32,6 +40,16 @@ namespace YemekTarifleriSitem
         protected void Button2_Click(object sender, EventArgs e)
         {
             Panel2.Visible = false;
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = true;
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = false;
         }
     }
 }
