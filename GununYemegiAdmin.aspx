@@ -1,7 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Mesajlar.aspx.cs" Inherits="YemekTarifleriSitem.Mesajlar" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="GununYemegiAdmin.aspx.cs" Inherits="YemekTarifleriSitem.GununYemegiAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+
+        .auto-style6 {
+            background-color: #FFCC99;
+        }
+
         .auto-style10 {
             width: 22px;
         }
@@ -10,27 +14,23 @@
             width: 21px;
         }
 
-        .auto-style9 {
-            text-align: left;
-            width: 379px;
+        .auto-style12 {
+            width: 391px;
         }
 
-        .auto-style8 {
-            text-align: left;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Panel ID="Panel1" runat="server" Style="background-color: #CCCCCC">
+    <asp:Panel ID="Panel1" runat="server" CssClass="auto-style6">
         <table class="auto-style4">
             <tr>
                 <td class="auto-style10">
-                    <asp:Button ID="Button1" runat="server" Height="30px" Text="+" Width="30px" OnClick="Button1_Click1" />
+                    <asp:Button ID="Button1" runat="server" Height="30px" Text="+" Width="30px" OnClick="Button1_Click" />
                 </td>
                 <td class="auto-style11"><strong>
                     <asp:Button ID="Button2" runat="server" Height="30px" Text="-" Width="30px" OnClick="Button2_Click" />
-                </strong></td>
-                <td>MESAJ LİSTESİ</td>
+                    </strong></td>
+                <td>YEMEK LİSTESİ</td>
             </tr>
         </table>
     </asp:Panel>
@@ -39,12 +39,12 @@
             <ItemTemplate>
                 <table class="auto-style4">
                     <tr>
-                        <td class="auto-style9">
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Gonderen") %>'></asp:Label>
-                        </td>
+                        <td class="auto-style12">
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Ad") %>'></asp:Label>
+                        </td>                       
                         <td class="auto-style8">
-                            <a href="MesajDetay.aspx?Id=<%#Eval("Id") %>">
-                                <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/people-reading-news-newspaper-morning-512_93157.png" Width="30px" />
+                            <a href="YemekDuzenle.aspx?Id=<%#Eval("Id") %>">
+                                <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/png-transparent-check-mark-checkbox-computer-icons-symbol-symbol-miscellaneous-angle-text.png" Width="30px" />
                             </a>
                         </td>
                     </tr>

@@ -71,16 +71,20 @@
     <Content Include="AnaSayfa.aspx" />
     <Content Include="Banner\Account-Login-Button-PNG-Clipart.png" />
     <Content Include="GununYemegi.aspx" />
+    <Content Include="GununYemegiAdmin.aspx" />
     <Content Include="Hakkimizda.aspx" />
     <Content Include="ikonlar\236-2362491_delete-icon-png.png" />
+    <Content Include="ikonlar\images-1-975x1024.png" />
     <Content Include="ikonlar\people-reading-news-newspaper-morning-512_93157.png" />
     <Content Include="ikonlar\png-clipart-computer-software-computer-icons-web-browser-computing-data-restart-miscellaneous-trademark.png" />
+    <Content Include="ikonlar\png-transparent-check-mark-checkbox-computer-icons-symbol-symbol-miscellaneous-angle-text.png" />
     <Content Include="ikonlar\png-transparent-computer-icons-icon-design-database-icon-text-trademark-logo.png" />
     <Content Include="iletisim.aspx" />
     <Content Include="KategoriDuzenle.aspx" />
     <Content Include="KategoriDetay.aspx" />
     <Content Include="Kategoriler.aspx" />
     <Content Include="Kullanici.css" />
+    <Content Include="MesajDetay.aspx" />
     <Content Include="Mesajlar.aspx" />
     <Content Include="Resimler\Kabak Mücver.jpeg" />
     <Content Include="Resimler\Hakkimizda.png" />
@@ -120,6 +124,13 @@
     </Compile>
     <Compile Include="GununYemegi.aspx.designer.cs">
       <DependentUpon>GununYemegi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GununYemegiAdmin.aspx.cs">
+      <DependentUpon>GununYemegiAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GununYemegiAdmin.aspx.designer.cs">
+      <DependentUpon>GununYemegiAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hakkimizda.aspx.cs">
       <DependentUpon>Hakkimizda.aspx</DependentUpon>
@@ -162,6 +173,13 @@
     </Compile>
     <Compile Include="Kullanici.Master.designer.cs">
       <DependentUpon>Kullanici.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MesajDetay.aspx.cs">
+      <DependentUpon>MesajDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MesajDetay.aspx.designer.cs">
+      <DependentUpon>MesajDetay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mesajlar.aspx.cs">
       <DependentUpon>Mesajlar.aspx</DependentUpon>
