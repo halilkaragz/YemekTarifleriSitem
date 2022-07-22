@@ -57,5 +57,17 @@ namespace YemekTarifleriSitem
             sqlCommand.ExecuteNonQuery();
             bgl.baglanti().Close();
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Update Yemekler Set Durum=0 Where Durum=1", bgl.baglanti());
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+
+            SqlCommand command = new SqlCommand("Update Yemekler Set Durum=1 Where Id=@p1", bgl.baglanti());
+            command.Parameters.AddWithValue("@p1", yemekId);
+            command.ExecuteNonQuery();
+            bgl.baglanti().Close();
+        }
     }
 }

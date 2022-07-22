@@ -57,5 +57,11 @@
                 <asp:Button ID="Button1" runat="server" CssClass="auto-style7" Text="Güncelle" Width="250px" OnClick="Button1_Click" />
                 </strong></td>
         </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style8"><strong>
+                <asp:Button ID="Button2" runat="server" CssClass="auto-style7" Text="Günün Yemeği Seç" Width="250px" OnClick="Button2_Click" />
+                </strong></td>
+        </tr>
     </table>
 </asp:Content>
