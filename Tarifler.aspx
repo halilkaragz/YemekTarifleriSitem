@@ -29,12 +29,43 @@
                 <td class="auto-style11"><strong>
                     <asp:Button ID="Button2" runat="server" Height="30px" Text="-" Width="30px" OnClick="Button2_Click" />
                 </strong></td>
-                <td>TARİF ÖNERİLERİ</td>
+                <td>ONAYSIZ TARİF ÖNERİLERİ</td>
             </tr>
         </table>
     </asp:Panel>
     <asp:Panel ID="Panel2" runat="server">
         <asp:DataList ID="DataList1" runat="server" Width="447px">
+            <ItemTemplate>
+                <table class="auto-style4">
+                    <tr>
+                        <td class="auto-style13">
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("AD") %>'></asp:Label>
+                        </td>
+                        <td class="auto-style12">
+                            <a href="TarifDetay.aspx?Id=<%#Eval("Id") %>">
+                                <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/785882_art-project-proposal-icon-png-download.png" Width="30px" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </ItemTemplate>
+        </asp:DataList>
+    </asp:Panel>
+     <asp:Panel ID="Panel3" runat="server" Style="background-color: #CCCCCC; margin-top:20px">
+        <table class="auto-style4">
+            <tr>
+                <td class="auto-style10">
+                    <asp:Button ID="Button3" runat="server" Height="30px" Text="+" Width="30px" OnClick="Button3_Click"  />
+                </td>
+                <td class="auto-style11"><strong>
+                    <asp:Button ID="Button4" runat="server" Height="30px" Text="-" Width="30px" OnClick="Button4_Click"  />
+                </strong></td>
+                <td>ONAYLI TARİF ÖNERİLERİ</td>
+            </tr>
+        </table>
+    </asp:Panel>
+    <asp:Panel ID="Panel4" runat="server">
+        <asp:DataList ID="DataList2" runat="server" Width="447px">
             <ItemTemplate>
                 <table class="auto-style4">
                     <tr>

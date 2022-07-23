@@ -65,12 +65,17 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style10">&nbsp;</td>
+                <td class="auto-style9"><strong>Kategori :</strong></td>
                 <td>
-                    <strong>
-                        <asp:Button ID="Button1" runat="server" CssClass="auto-style11" OnClick="Button1_Click" Text="Onayla" Width="200px" />
-                    </strong>
+                    <asp:DropDownList ID="DropDownList2" runat="server" Width="200px">
+                    </asp:DropDownList>
                 </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td><strong>
+                    <asp:Button ID="Button1" runat="server" CssClass="auto-style11" OnClick="Button1_Click" Text="Onayla" Width="200px" />
+                    </strong></td>
             </tr>
         </table>
     </asp:Panel>
