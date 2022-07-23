@@ -89,6 +89,7 @@
     <Content Include="Mesajlar.aspx" />
     <Content Include="Resimler\Kabak Mücver.jpeg" />
     <Content Include="Resimler\Hakkimizda.png" />
+    <Content Include="TarifDetay.aspx" />
     <Content Include="Tarifler.aspx" />
     <Content Include="TarifOner.aspx" />
     <Content Include="Web.config" />
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlSinifi.cs" />
+    <Compile Include="TarifDetay.aspx.cs">
+      <DependentUpon>TarifDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TarifDetay.aspx.designer.cs">
+      <DependentUpon>TarifDetay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tarifler.aspx.cs">
       <DependentUpon>Tarifler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

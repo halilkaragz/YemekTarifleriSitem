@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Tarifler.aspx.cs" Inherits="YemekTarifleriSitem.Tarifler" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-
         .auto-style10 {
             width: 22px;
         }
@@ -13,22 +13,22 @@
         .auto-style12 {
             text-align: right;
         }
+
         .auto-style13 {
             width: 375px;
         }
-
-        </style>
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="Panel1" runat="server" Style="background-color: #CCCCCC">
         <table class="auto-style4">
             <tr>
                 <td class="auto-style10">
-                    <asp:Button ID="Button1" runat="server" Height="30px" Text="+" Width="30px" OnClick="Button1_Click"  />
+                    <asp:Button ID="Button1" runat="server" Height="30px" Text="+" Width="30px" OnClick="Button1_Click" />
                 </td>
                 <td class="auto-style11"><strong>
-                    <asp:Button ID="Button2" runat="server" Height="30px" Text="-" Width="30px" OnClick="Button2_Click"  />
-                    </strong></td>
+                    <asp:Button ID="Button2" runat="server" Height="30px" Text="-" Width="30px" OnClick="Button2_Click" />
+                </strong></td>
                 <td>TARİF ÖNERİLERİ</td>
             </tr>
         </table>
@@ -42,7 +42,9 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("AD") %>'></asp:Label>
                         </td>
                         <td class="auto-style12">
-                            <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/785882_art-project-proposal-icon-png-download.png" Width="30px" />
+                            <a href="TarifDetay.aspx?Id=<%#Eval("Id") %>">
+                                <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/785882_art-project-proposal-icon-png-download.png" Width="30px" />
+                            </a>
                         </td>
                     </tr>
                 </table>
