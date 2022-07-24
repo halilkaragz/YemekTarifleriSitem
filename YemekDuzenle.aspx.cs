@@ -45,14 +45,17 @@ namespace YemekTarifleriSitem
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            FileUpload1.SaveAs(Server.MapPath("/Resimler/" + FileUpload1.FileName));
+
             SqlCommand sqlCommand =  new SqlCommand("Update Yemekler Set " +
-                "Ad=@p1, Malzeme=@p2, Tarif=@p3, KategoriId = @p4" +
-                " Where Id=@p5", bgl.baglanti());
+                "Ad=@p1, Malzeme=@p2, Tarif=@p3, KategoriId = @p4, Resim=@p6 " +
+                "Where Id=@p5", bgl.baglanti());
 
             sqlCommand.Parameters.AddWithValue("@p1", TextBox1.Text);
             sqlCommand.Parameters.AddWithValue("@p2", TextBox2.Text);
             sqlCommand.Parameters.AddWithValue("@p3", TextBox3.Text);
             sqlCommand.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+            sqlCommand.Parameters.AddWithValue("@p6", "~/Resimler/" + FileUpload1.FileName);
             sqlCommand.Parameters.AddWithValue("@p5", yemekId);
             sqlCommand.ExecuteNonQuery();
             bgl.baglanti().Close();

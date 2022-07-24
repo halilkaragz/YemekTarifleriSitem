@@ -35,7 +35,7 @@
 
     <asp:Label ID="Label3" runat="server" CssClass="auto-style4" Text="Label"></asp:Label>
     <br />
-    <asp:DataList ID="DataList2" runat="server">
+    <asp:DataList ID="DataList2" runat="server" Width="449px">
         <ItemTemplate>
             <table class="auto-style5">
                 <tr>

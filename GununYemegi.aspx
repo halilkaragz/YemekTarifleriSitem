@@ -8,10 +8,13 @@
         .auto-style5 {
             width: 106%;
         }
+        .auto-style6 {
+            margin-right: 15px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="DataList2" runat="server" Width="426px">
+    <asp:DataList ID="DataList2" runat="server" Width="426px" CssClass="auto-style6">
         <ItemTemplate>
             <table class="auto-style5">
                 <tr>
@@ -30,7 +33,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style4">
-                        <asp:Image ID="Image1" runat="server" Height="183px" Width="405px" ImageUrl='~/Resimler/Kabak Mücver.jpeg' />
+                        <asp:Image ID="Image1" runat="server" Height="183px" Width="405px" ImageUrl='<%# Eval("Resim") %>' />
                     </td>
                 </tr>
                 <tr>

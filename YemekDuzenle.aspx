@@ -52,6 +52,12 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style9"><strong>Yemek Görüntü :</strong></td>
+            <td class="auto-style6">
+                <asp:FileUpload ID="FileUpload1" runat="server" Width="247px" />
+            </td>
+        </tr>
+        <tr>
             <td>&nbsp;</td>
             <td class="auto-style8"><strong>
                 <asp:Button ID="Button1" runat="server" CssClass="auto-style7" Text="Güncelle" Width="250px" OnClick="Button1_Click" />
